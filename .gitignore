@@ -1,0 +1,8 @@
+# IDE files
+.idea/
+
+# Build folders
+*-build-*/
+
+# project exec file
+test_files/result.txt
