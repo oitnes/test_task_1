@@ -25,4 +25,4 @@ jobs:
         run: docker build -t ${TEST_IMAGE_TAG} -f Dockerfile --build-arg DOCKER_IMAGE=${IMAGE_ID} --build-arg IMAGE_VERSION=${IMAGE_VERSION} ${PWD}
 
       - name: Run
-        run: docker run ${TEST_IMAGE_TAG}
+        run: docker run -a ${TEST_IMAGE_TAG}
