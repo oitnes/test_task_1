@@ -11,6 +11,5 @@ RUN cmake -DCMAKE_BUILD_TYPE=Release -S ${PROJECT_SOURCE_DIR} -B ${PROJECT_BUILD
 WORKDIR ${PROJECT_BUILD_DIR}
 RUN make
 
-WORKDIR ${PROJECT_DIR}/test_files
-RUN ls
+WORKDIR ${PROJECT_SOURCE_DIR}/test_files
 CMD ["/project/build/test_executable", "&& cat keyword.txt", "&& cat text.txt", "&& cat result.txt"]
