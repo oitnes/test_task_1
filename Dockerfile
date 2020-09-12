@@ -12,4 +12,4 @@ WORKDIR ${PROJECT_BUILD_DIR}
 RUN make
 
 WORKDIR ${PROJECT_SOURCE_DIR}/test_files
-CMD ["/project/build/test_executable", "&& cat keyword.txt", "&& cat text.txt", "&& cat result.txt"]
+ENTRYPOINT /project/build/test_executable && cat keyword.txt && cat text.txt && cat result.txt
