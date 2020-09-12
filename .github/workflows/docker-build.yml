@@ -26,10 +26,7 @@ jobs:
 
       - name: Run
         run: |
-        docker run ${TEST_IMAGE_TAG}
-        echo "keyword file"
-        cat test_files/keyword.txt
-        echo "text file"
-        cat test_files/text.txt
-        echo "result file"
-        cat test_files/result.txt
+          docker run ${TEST_IMAGE_TAG}
+          cat test_files/keyword.txt
+          cat test_files/text.txt
+          cat test_files/result.txt
