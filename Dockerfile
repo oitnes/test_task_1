@@ -12,4 +12,4 @@ WORKDIR ${PROJECT_BUILD_DIR}
 RUN make
 
 WORKDIR ${PROJECT_SOURCE_DIR}/test_files
-ENTRYPOINT /project/build/test_executable && cat keyword.txt && cat text.txt && cat result.txt
+ENTRYPOINT /project/build/test_executable && echo -e "\nkeyword file:\n" && cat keyword.txt && echo -e "\ntext file:\n" && cat text.txt && echo -e "\nresult file:\n"  && cat result.txt
